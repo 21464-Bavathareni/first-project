@@ -1,0 +1,4 @@
+eva=input() 
+eva=eva.replace("print","") 
+l=eval(eva) 
+print(l)
