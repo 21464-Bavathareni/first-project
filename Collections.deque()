@@ -1,0 +1,21 @@
+from collections import deque
+def solve():
+    d = deque()
+    try:
+        n = int(input())
+    except EOFError:
+        return
+    for _ in range(n):
+        input_data = input().split()
+        command = input_data[0]
+        if command == 'append':
+            d.append(input_data[1])
+        elif command == 'appendleft':
+            d.appendleft(input_data[1])
+        elif command == 'pop':
+            d.pop()
+        elif command == 'popleft':
+            d.popleft()
+    print(*(d))
+if __name__ == "__main__":
+    solve()
