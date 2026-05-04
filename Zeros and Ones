@@ -1,0 +1,7 @@
+import numpy as np
+
+L = list(map(int,input().split()))
+T = tuple(L)
+
+print(np.zeros(T,dtype=int))
+print(np.ones(T,dtype=int))
