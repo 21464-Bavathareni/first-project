@@ -1,0 +1,9 @@
+
+N, X = map(int, input().split())
+sheet = []
+for _ in range(X):
+    subject_scores = list(map(float, input().split()))
+    sheet.append(subject_scores)
+for student_marks in zip(*sheet):    
+    average = sum(student_marks) / X
+    print(round(average, 1))
