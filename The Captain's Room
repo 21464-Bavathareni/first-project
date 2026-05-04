@@ -1,0 +1,14 @@
+k = int(input())
+rooms = input().split() # Keeping as strings for speed
+seen_once = set()
+seen_more = set()
+
+for r in rooms:
+    if r not in seen_more:
+        if r in seen_once:
+            seen_once.remove(r)
+            seen_more.add(r)
+        else:
+            seen_once.add(r)
+
+print(seen_once.pop())
